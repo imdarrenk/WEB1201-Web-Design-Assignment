@@ -32,7 +32,6 @@ The following credentials are pre-set in `login.html` and will grant access to t
 
 | Email | Password |
 |---|---|
-| `Webwizardbro69@gmail.com` | `groupget100%marks` |
 | `username@gmail.com` | `password` |
 | `Group12@gmail.com` | `Gets100%marks` |
 - Custom fonts and background images per page
