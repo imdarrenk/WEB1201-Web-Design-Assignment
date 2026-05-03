@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWizards - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script> //i ask lecture help geh 
+        function validateLogin(event) {
+            event.preventDefault(); 
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+        
+            const validCredentials = [
+                { email: "Webwizardbro69@gmail.com", password: "groupget100%marks" },
+                { email: "username@gmail.com", password: "password" },
+                { email: "Group12@gmail.com", password: "Gets100%marks" }
+            ];
+
+            
+            const isValid = validCredentials.some(
+                cred => cred.email === email && cred.password === password
+            );
+
+            if (isValid) {
+               
+                window.location.href = "./logged_in_pages/home(login).html";
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+        }
+        function toggleMobileMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    
+    if (mobileMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
+}
+
+document.querySelectorAll('.mobile-nav-menu a, .mobile-auth-buttons a').forEach(link => {
+    link.addEventListener('click', () => {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+});
+
+
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="homepage.html" class="logo">WW.</a>
+        
+        <ul class="nav-menu">   
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="login.html" class="login-btn active">Login</a>
+            <a href="signup.html" class="signup-btn">Sign up</a>
+        </div>
+        
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-auth-buttons">
+            <a href="login.html" class="mobile-login-btn">Login</a>
+            <a href="signup.html" class="mobile-signup-btn">Sign up</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <h1>Welcome back to WebWizards.</h1>
+            <p>Let's get you back in.</p>
+
+            <form onsubmit="validateLogin(event)">
+        
+                <label>Email</label><br>
+                <input type="email" id="email" placeholder="johndoe@email.com" required><br><br>
+
+                <label>Password</label><br>
+                <input type="password" id="password" placeholder="*******" required><br><br>
+
+                <label>
+                    <input type="checkbox"> Remember me
+                </label><br><br>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p class="signup-note">
+                Don't have an account?
+                <a href="signup.html">Sign up here.</a>
+            </p>
+        </div>
+
+        <div class="right"></div>
+    </div>
+    <script>
+        function validateLogin(event) {
+            event.preventDefault(); 
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            const validCredentials = [
+                { email: "Webwizardbro69@gmail.com", password: "groupget100%marks" },
+                { email: "username@gmail.com", password: "password" },
+                { email: "Group12@gmail.com", password: "Gets100%marks" }
+            ];
+
+            const isValid = validCredentials.some(
+                cred => cred.email === email && cred.password === password
+            );
+
+            if (isValid) {
+                window.location.href = "./logged_in_pages/home(login).html";
+                localStorage.removeItem("loggedOut")
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+        }
+
+        function toggleMobileMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            
+            if (mobileMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.mobile-nav-menu a, .mobile-auth-buttons a').forEach(link => {
+                link.addEventListener('click', () => {
+                    const hamburger = document.querySelector('.hamburger');
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            });
+
+            document.getElementById('mobileMenu').addEventListener('click', (e) => {
+                if (e.target === e.currentTarget) {
+                    const hamburger = document.querySelector('.hamburger');
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    const hamburger = document.querySelector('.hamburger');
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">WebWizards.</div>
+                <div class="tagline">World class support.<br> Trusted by 20,000+ companies worldwide.<br>The only website manager you need.</div>
+            </div>
+            
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="homepage.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">© 2025 WebWizards. All rights reserved.</div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

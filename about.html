@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWizards - About Us</title>
+    <link rel="stylesheet" href="css/about_style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="homepage.html" class="logo">WW.</a>
+    
+    <ul class="nav-menu">   
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="signup.html" class="signup-btn">Sign up</a>
+    </div>
+    
+    <div class="hamburger" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-menu">
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-auth-buttons">
+        <a href="login.html" class="mobile-login-btn">Login</a>
+        <a href="signup.html" class="mobile-signup-btn">Sign up</a>
+    </div>
+</div>
+
+<section class="about-hero">
+    <h1 class="about-hero-title">About Us.</h1>
+</section>
+
+<section class="about-intro">
+    <div class="about-intro-content">
+        <h2>Designing and hosting websites since 2020.</h2>
+        <p>WebWizards is a premier web design consultancy that transforms ideas into extraordinary digital experiences. Founded with a passion for innovation and a commitment to excellence, we have grown from a small team of dreamers into a trusted partner for over 20,000 companies worldwide.</p>
+        <p>Our journey began with a simple belief: that every business deserves a digital presence that not only looks stunning but performs flawlessly. Today, we continue to push the boundaries of what's possible in web design, combining creativity with cutting-edge technology to deliver solutions that drive real results.</p>
+    </div>
+</section>
+
+<section class="services-section">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-icon">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+            </div>
+            <h3>Web Design</h3>
+            <p>We create visually stunning and user-friendly websites that captivate your audience and reflect your brand's unique identity. Our designs are responsive, accessible, and optimized for all devices, ensuring your message reaches everyone, everywhere.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                    <line x1="7" y1="2" x2="7" y2="22"/>
+                    <line x1="17" y1="2" x2="17" y2="22"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <line x1="2" y1="7" x2="7" y2="7"/>
+                    <line x1="2" y1="17" x2="7" y2="17"/>
+                    <line x1="17" y1="17" x2="22" y2="17"/>
+                    <line x1="17" y1="7" x2="22" y2="7"/>
+                </svg>
+            </div>
+            <h3>Web Applications</h3>
+            <p>From complex enterprise solutions to sleek consumer apps, we build robust web applications that scale with your business. Our full-stack development expertise ensures seamless functionality, security, and performance across all platforms.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+            </div>
+            <h3>Digital Marketing</h3>
+            <p>Amplify your online presence with our comprehensive digital marketing strategies. We combine SEO, social media marketing, content creation, and analytics to drive traffic, engagement, and conversions that matter to your bottom line.</p>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p>"WebWizards transformed our online presence completely. Their attention to detail and innovative approach exceeded our expectations."</p>
+                <div class="testimonial-author">
+                    <strong>Tim Cook</strong>
+                    <span>Chief Executive Oficer, Apple</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p>"The team's expertise in web applications is unmatched. They delivered a solution that perfectly fits our complex business needs."</p>
+                <div class="testimonial-author">
+                    <strong>Lorraine Twohill</strong>
+                    <span>Chief Marketing Officer, Google</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p>"Outstanding digital marketing results. Our online visibility increased by 300% within just three months of working with WebWizards."</p>
+                <div class="testimonial-author">
+                    <strong>Shazlina Suffian</strong>
+                    <span>Executive Vice President, Maybank</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p>"Professional, creative, and reliable. WebWizards doesn't just build websites – they build digital experiences that convert."</p>
+                <div class="testimonial-author">
+                    <strong>Faye Iosotaluno</strong>
+                    <span>Chief Executive Officer, Tinder</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p>"From concept to launch, the collaboration was seamless. They truly understand what it means to be a digital partner."</p>
+                <div class="testimonial-author">
+                    <strong>Ryan Sims</strong>
+                    <span>Chief Design Officer, Duolingo</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p>"WebWizards delivered beyond our timeline and budget. Their commitment to excellence is evident in every project they touch."</p>
+                <div class="testimonial-author">
+                    <strong>Mark Zuckerberg</strong>
+                    <span>Chief Executive Officer, Meta</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+        <div class="team-member">
+            <div class="team-photo">
+                <img src="Resources/Team/Darren.jpeg" alt="Zhi Sern">
+            </div>
+            <div class="team-info">
+                <h3>Zhi Sern, Koh</h3>
+                <span class="role">Founder</span>
+                <p>With over 10 years of experience in digital design, Zhi Sern leads our creative vision and ensures every project reflects our commitment to excellence.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="team-photo">
+                <img src="Resources/Team/Andre.jpeg" alt="Andre Zachary">
+            </div>
+            <div class="team-info">
+                <h3>Andre Zachary, Reutens</h3>
+                <span class="role">Lead Developer</span>
+                <p>Andre brings complex ideas to life through code. His expertise in full-stack development ensures our applications are both powerful and scalable.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="team-photo">
+                <img src="Resources/Team/Jett.jpeg" alt="Kaei Jie">
+            </div>
+            <div class="team-info">
+                <h3>Kaei Jie, Siow</h3>
+                <span class="role">UX/UI Designer</span>
+                <p>Kaei Jie crafts intuitive user experiences that delight and engage. Every pixel is purposefully placed to create seamless digital journeys.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="team-photo">
+                <img src="Resources/Team/Ali.jpeg" alt="Ali">
+            </div>
+            <div class="team-info">
+                <h3>Ali, Gasanov</h3>
+                <span class="role">Digital Marketing Strategist</span>
+                <p>Ali develops comprehensive digital strategies that amplify our clients' online presence and drive measurable business growth.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="team-photo">
+                <img src="Resources/Team/Sanjar.jpeg" alt="Sanjar">
+            </div>
+            <div class="team-info">
+                <h3>Sanjar, Annayarov</h3>
+                <span class="role">Project Manager</span>
+                <p>Sanjar ensures every project runs smoothly from start to finish. His attention to detail and communication skills keep our team and clients aligned.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">WebWizards.</div>
+                <div class="tagline">World class support.<br> Trusted by 20,000+ companies worldwide.<br>The only website manager you need.</div>
+            </div>
+            
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="homepage.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">© 2025 WebWizards. All rights reserved.</div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

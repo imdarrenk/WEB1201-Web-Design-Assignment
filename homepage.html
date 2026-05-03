@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Web Wizards - Home</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial scale=1.0" />
+        <link rel="stylesheet" href="./css/homepage_style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+<nav class="navbar">
+    <a href="homepage.html" class="logo">WW.</a>
+    
+    <ul class="nav-menu">   
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="signup.html" class="signup-btn">Sign up</a>
+    </div>
+    
+    <div class="hamburger" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-menu">
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-auth-buttons">
+        <a href="login.html" class="mobile-login-btn">Login</a>
+        <a href="signup.html" class="mobile-signup-btn">Sign up</a>
+    </div>
+</div>
+        <main>
+            <h1>
+                <span class="line1">Revolutionising</span><br />
+                <span class="line2">web designs.</span>
+            </h1>
+        </main>
+        
+    </body>
+</html>

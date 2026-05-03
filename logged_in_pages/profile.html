@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWizards - My Profile</title>
+    <link rel="stylesheet" href="./css(login)/profile.css">
+    <script src="../script.js" defer></script>
+
+</head>
+<body>
+<nav class="navbar">
+    <a href="home(login).html" class="logo">WW.</a>
+    <ul class="nav-menu">
+        <li><a href="about(login).html" >About</a></li>
+        <li><a href="portfolio(login).html">Portfolio</a></li>
+        <li><a href="pricing(login).html">Pricing</a></li>
+        <li><a href="contact(login).html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+        <a href="profile.html" class="login-btn">Profile</a>
+    </div>
+    
+    <div class="hamburger" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-menu">
+        <li><a href="about(login).html">About</a></li>
+        <li><a href="portfolio(login).html">Portfolio</a></li>
+        <li><a href="pricing(login).html">Pricing</a></li>
+        <li><a href="contact(login).html">Contact</a></li>
+    </ul>
+    <div class="mobile-auth-buttons">
+        <a href="profile.html" class="mobile-prof-btn">My Profile</a>
+    </div>
+</div>
+        <div class="main">
+            <img class="pfp" src="./Resources/profilepic.png">
+            <div class="welcome">Welcome back,</div>
+            <div class="name">Dr. Suki-Chan!</div>
+            <div class="logout">Not you? <a href="../homepage.html" onclick="logout()">Log Out</a></div>
+        </div>
+        <script>
+            function logout(){
+                localStorage.setItem("loggedOut", "true");
+                window.location.href = "../homepage.html";
+            }
+
+            window.addEventListener("DOMContentLoaded", function () {
+                if(localStorage.getItem("loggedOut") === "true") {
+                    window.location.replace("../homepage.html");
+                }
+            });
+        </script>
+    </body>
+</html>
